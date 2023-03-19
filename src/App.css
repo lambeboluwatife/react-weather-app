@@ -1,38 +1,88 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 40px;
+}
+
+.background {
+  background-image: url(./images/sand.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-time {
+  display: inline;
+  color: #fff;
+}
+
+.location {
+  /* float: right; */
+  display: inline;
+  color: #000;
+  margin-bottom: 40vh;
+}
+
+.time,
+.city {
+  font-size: 3rem;
+}
+
+.data {
+  background-color: #fff;
+  height: 21.5vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.description {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-source {
+  width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.celsius {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.degree {
+  display: inline;
 }
 
-.App-link {
-  color: #61dafb;
+span {
+  display: inline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.desc-images {
+  border-radius: 50%;
+  width: 50px;
 }
