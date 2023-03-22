@@ -5,8 +5,8 @@ import Header from "./components/Header";
 import Weather from "./components/Weather";
 
 const App = () => {
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
 
   const [weatherData, setWeatherData] = useState(null);
 
@@ -55,8 +55,8 @@ const App = () => {
 
   return (
     <div className="">
-      <Header weatherData={weatherData} />
-      <Weather weatherData={weatherData} />
+      {weatherData && <Header weatherData={weatherData} />}
+      {weatherData && <Weather weatherData={weatherData} />}
     </div>
   );
 };
