@@ -86,3 +86,21 @@ span {
   border-radius: 50%;
   width: 50px;
 }
+
+/* Tablets and under */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .weather-temp {
+    text-align: center;
+  }
+
+  .background {
+    display: block;
+    height: 80vh;
+    text-align: center;
+  }
+}
