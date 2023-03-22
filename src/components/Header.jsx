@@ -1,12 +1,12 @@
 import moment from "moment";
 
-const Header = ({ weatherData }) => {
+const Header = ({ userData }) => {
   const date = new Date().toLocaleString();
   const time = new Date().toLocaleTimeString();
 
   return (
     <div className="container background">
-      {weatherData && (
+      {userData && (
         <>
           <div className="date-time">
             <div className="time">
@@ -17,8 +17,8 @@ const Header = ({ weatherData }) => {
             </div>
           </div>
           <div className="location">
-            <div className="city">{weatherData.name}</div>
-            <div className="country">{weatherData.sys.country}</div>
+            <div className="city">{userData.city}</div>
+            <div className="country">{userData.country}</div>
           </div>
         </>
       )}
