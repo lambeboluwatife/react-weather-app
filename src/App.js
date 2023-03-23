@@ -12,7 +12,7 @@ const App = () => {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
-    fetch("http://ip-api.com/json")
+    fetch("https://ip-api.com/json")
       .then((response) => response.json())
       .then((data) => {
         setLatitude(data.lat);
