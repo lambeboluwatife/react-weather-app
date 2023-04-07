@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "type": "clear sky",
+    "description": "Our favorite type of weather. Keeping cool and non-burnt is what it's all about here. There's plenty of clothing to choose, from any number of high street shops. Lightweight, breathable clothing and a hat are best, but be sure to use high factor sun cream and stay hydrated too. Oh, and take the opportunity to get ice cream!"
+  },
+  {
+    "id": 2,
+    "type": "few clouds",
+    "description": "Remain in vogue with a knee length print or knit cardigan, either long or short-sleeved will work. Try it in dark red or burnt orange color. Let this drape over a silk, sleeveless, button-down collar blouse, paired with some light-colored skinny jeans."
+  },
+  {
+    "id": 3,
+    "type": "scattered clouds",
+    "description": "Put your hair up in a messy bun, throw on some daisy duke-style shorts and some platform booties. Pair them with a tank and a lumberjack plaid blouse. Roll those sleeves up and go. Minimize your accessories to some simple gold hoop earrings, for a carefree, yet fashionable look."
+  },
+  {
+    "id": 4,
+    "type": "broken clouds",
+    "description": "For those days where the weather is looking a little sketchy (it's cool and looks like it's going to rain, but doesn't), layer your look to keep warm without totally covering up. At most fashion boutiques, ultra-thin spaghetti strap tanks and t-shirts are in stock during the spring and summer months. Add a few of those shirts to your summer wardrobe, so when cool days like this approach you can be warm and still look summery."
+  },
+  {
+    "id": 5,
+    "type": "overcast clouds",
+    "description": "For those days where the weather is looking a little sketchy (it's cool and looks like it's going to rain, but doesn't), layer your look to keep warm without totally covering up. At most fashion boutiques, ultra-thin spaghetti strap tanks and t-shirts are in stock during the spring and summer months. Add a few of those shirts to your summer wardrobe, so when cool days like this approach you can be warm and still look summery."
+  },
+  {
+    "id": 6,
+    "type": "shower rain",
+    "description": "Getting outside in wet weather doesn't have to leave you in a wet, sodden mess. When just a little rain is falling, you're best to use a lightweight, packaway raincoat. This type of jacket is waterproof enough to make sure you'll stay dry, but still packs away into a tiny bag for handiness."
+  },
+  {
+    "id": 7,
+    "type": "rain",
+    "description": "When the rain really gets going, you'll need to have invested in a waterproof jacket that can handle the deluge. Look for technical outdoor jackets with high water column values (8000mm+). Features such as water resistant zips, storm flaps and peaked hoods can also help."
+  },
+  {
+    "id": 8,
+    "type": "thunderstorm",
+    "description": "With this in mind, pick out some breezy materials like cotton, linen, chambray, and jersey. Additionally, look for clothing made with moisture-wicking materials like bamboo, which won't soak up the rain. Stay away from materials like leather, heavy denim, and vinyl, which aren't ideal for hot, humid weather."
+  },
+  {
+    "id": 9,
+    "type": "snow",
+    "description": "With snow falling at unseasonable times of the year, it's better to have a few pieces of suitable clothing at the ready. Wellington boots are great for keeping your feet dry, and work really good with waterproof trousers over the top. Thick socks underneath that, and you'll be throwing snowballs longer than everyone else. Most types of waterproof jackets will keep you dry, as long as they are regularly washed and re-proofed. What you'll need to make sure of is a decent fleece mid layer to keep you warm. Couple this with a pair of waterproof gloves and a wooly hat for full preparedness."
+  },
+  {
+    "id": 10,
+    "type": "mist",
+    "description": "Choose garments made with breathable, quick-drying fabrics. Additionally, look for clothing made with moisture-wicking materials like bamboo, which won't soak up the rain. Stay away from materials like leather, heavy denim, and vinyl, which aren't ideal for hot, humid weather."
+  },
+  {
+    "id": 11,
+    "type": "light snow",
+    "description": "With snow falling at unseasonable times of the year, it's better to have a few pieces of suitable clothing at the ready. Wellington boots are great for keeping your feet dry, and work really good with waterproof trousers over the top. Thick socks underneath that, and you'll be throwing snowballs longer than everyone else. Most types of waterproof jackets will keep you dry, as long as they are regularly washed and re-proofed. What you'll need to make sure of is a decent fleece mid layer to keep you warm. Couple this with a pair of waterproof gloves and a wooly hat for full preparedness."
+  }
+]

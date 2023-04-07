@@ -24,6 +24,7 @@ const Weather = ({ weatherData }) => {
                     alt="weather icon"
                   />
                   <h4>{weatherData.weather[0].description}</h4>
+                  <h6>Forecast for {weatherData.name}</h6>
                 </div>
                 <div className="weather-temp">
                   <div className="celsius">

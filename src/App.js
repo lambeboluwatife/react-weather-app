@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import axios from "axios";
 import "./App.css";
 import Header from "./components/Header";
 import Weather from "./components/Weather";
@@ -10,6 +9,7 @@ const App = () => {
 
   const [userData, setUserData] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://ip-api.com/json")
@@ -19,7 +19,7 @@ const App = () => {
         setLongitude(data.lon);
         setUserData(data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error));
   }, []);
 
   useEffect(() => {
@@ -35,9 +35,27 @@ const App = () => {
     }
   }, [latitude, longitude]);
 
+  const getSearch = (search) => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=40547464b0a67a8f5d0e5fcd1364a8fe`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setWeatherData(data);
+      })
+      .catch((error) => setError(error));
+  };
+
   return (
-    <div className="">
-      {weatherData && <Header userData={userData} />}
+    <div className="body">
+      {weatherData && (
+        <Header
+          weatherData={weatherData}
+          getSearch={getSearch}
+          userData={userData}
+        />
+      )}
+      {error ? <p>{error.message}</p> : null}
       {weatherData && <Weather weatherData={weatherData} />}
     </div>
   );
