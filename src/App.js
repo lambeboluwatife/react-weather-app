@@ -83,11 +83,21 @@ const App = () => {
 
   return (
     <div className="body">
-      {error && <div style={{ textAlign: "center" }}>{error}</div>}
-      {weatherData && (
-        <Header weatherData={weatherData} getSearch={getSearch} error={error} />
+      {!weatherData ? (
+        <div className="loading">Loading....</div>
+      ) : (
+        <>
+          {error && <div style={{ textAlign: "center" }}>{error}</div>}
+          {weatherData && (
+            <Header
+              weatherData={weatherData}
+              getSearch={getSearch}
+              error={error}
+            />
+          )}
+          {weatherData && <Weather weatherData={weatherData} />}
+        </>
       )}
-      {weatherData && <Weather weatherData={weatherData} />}
     </div>
   );
 };
