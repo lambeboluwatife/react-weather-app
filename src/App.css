@@ -123,6 +123,13 @@ form {
   height: 100vh;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25%;
+}
+
 /* Tablets and under */
 @media (max-width: 500px) {
   .grid {
