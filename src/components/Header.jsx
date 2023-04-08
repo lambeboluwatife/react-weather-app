@@ -1,14 +1,14 @@
 import moment from "moment";
 import Search from "./Search";
 
-const Header = ({ userData, getSearch, weatherData }) => {
+const Header = ({ getSearch, weatherData, error }) => {
   const date = new Date().toLocaleString();
   const time = new Date().toLocaleTimeString();
 
   return (
     <div className="container background">
       <div className="flex">
-        {userData && (
+        {weatherData && (
           <>
             <div className="date-time">
               <div className="time">
@@ -19,13 +19,13 @@ const Header = ({ userData, getSearch, weatherData }) => {
               </div>
             </div>
             <div className="location">
-              <div className="city">{userData.city}</div>
-              <div className="country">{userData.country}</div>
+              <div className="city">{weatherData.name}</div>
+              <div className="country">{weatherData.sys.country}</div>
             </div>
           </>
         )}
       </div>
-      <Search getSearch={getSearch} weatherData={weatherData} />
+      <Search getSearch={getSearch} weatherData={weatherData} error={error} />
     </div>
   );
 };
