@@ -7,19 +7,42 @@ const App = () => {
   const [latitude, setLatitude] = useState(null);
   const [longitude, setLongitude] = useState(null);
 
-  const [userData, setUserData] = useState(null);
+  // const [accuracy, setAccuracy] = useState("User location may not be accurate");
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://ip-api.com/json")
-      .then((response) => response.json())
-      .then((data) => {
-        setLatitude(data.lat);
-        setLongitude(data.lon);
-        setUserData(data);
-      })
-      .catch((error) => setError(error));
+    // fetch("http://ip-api.com/json")
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     setLatitude(data.lat);
+    //     setLongitude(data.lon);
+    //     setUserData(data);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     setError(error);
+    //   });
+    const successCallback = (position) => {
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
+    };
+
+    const errorCallback = (error) => {
+      console.log(error);
+    };
+
+    const options = {
+      enableHighAccuracy: true,
+      maximumAge: 30000,
+      timeout: 27000,
+    };
+
+    navigator.geolocation.getCurrentPosition(
+      successCallback,
+      errorCallback,
+      options
+    );
   }, []);
 
   useEffect(() => {
@@ -30,6 +53,7 @@ const App = () => {
         .then((response) => response.json())
         .then((data) => {
           setWeatherData(data);
+          console.log(data);
         })
         .catch((error) => console.log(error));
     }
@@ -41,21 +65,28 @@ const App = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setWeatherData(data);
+        if (data.cod === "404") {
+          // const message = data.message;
+          setError(data.message);
+          setTimeout(() => {
+            setError("");
+          }, 2000);
+        } else {
+          setWeatherData(data);
+        }
       })
-      .catch((error) => setError(error));
+      .catch((error) => {
+        console.log(error);
+        setError(error);
+      });
   };
 
   return (
     <div className="body">
+      {error && <div style={{ textAlign: "center" }}>{error}</div>}
       {weatherData && (
-        <Header
-          weatherData={weatherData}
-          getSearch={getSearch}
-          userData={userData}
-        />
+        <Header weatherData={weatherData} getSearch={getSearch} error={error} />
       )}
-      {error ? <p>{error.message}</p> : null}
       {weatherData && <Weather weatherData={weatherData} />}
     </div>
   );

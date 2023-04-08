@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Outfits from "../outfits.json";
-const Search = ({ getSearch, weatherData }) => {
+const Search = ({ getSearch, weatherData, error }) => {
   const [search, setSearch] = useState("");
 
   const onSubmit = (e) => {
@@ -33,6 +33,7 @@ const Search = ({ getSearch, weatherData }) => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
+        {/* {error && <h6 style={{ color: "red" }}>{error}</h6>} */}
       </div>
       <div className="outfit">
         <h6>
