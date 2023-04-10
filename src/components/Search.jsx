@@ -33,13 +33,16 @@ const Search = ({ getSearch, weatherData, error }) => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </form>
-        {/* {error && <h6 style={{ color: "red" }}>{error}</h6>} */}
       </div>
       <div className="outfit">
         <h6>
           <strong>Outfit Recommendation: </strong>
         </h6>
-        <h6>{newOutfit}</h6>
+        <h6>
+          {newOutfit
+            ? newOutfit
+            : "We don't have an outfit recommendation for this weather. We are working on that."}
+        </h6>
       </div>
     </div>
   );
