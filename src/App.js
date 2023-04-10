@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Weather from "./components/Weather";
+import Loading from "./components/Loading";
 
 const App = () => {
   const [latitude, setLatitude] = useState(null);
@@ -84,7 +85,7 @@ const App = () => {
   return (
     <div className="body">
       {!weatherData ? (
-        <div className="loading">Loading....</div>
+        <Loading />
       ) : (
         <>
           {error && <div style={{ textAlign: "center" }}>{error}</div>}
